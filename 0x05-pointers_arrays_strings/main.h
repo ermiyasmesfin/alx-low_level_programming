@@ -1,5 +1,5 @@
-#ifndef FILE_HOLBERTON
-#define FILE_HOLBERTON
+#ifndef FILE_MAIN
+#define FILE_MAIN
 
 void rev_string(char *s);
 
