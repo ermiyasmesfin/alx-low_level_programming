@@ -1,7 +1,7 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _isupper - check the code for Holberton School students.
+ * _isupper - check the code for main School students.
  *
  * @c: is an integer param
  *
