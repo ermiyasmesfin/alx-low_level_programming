@@ -1,1 +1,1 @@
-ALX static lib
+Practicing static libraries
