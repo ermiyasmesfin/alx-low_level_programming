@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * _isupper - check the code for main School students.
+ * _isupper - Checks for uppercase characters.
+ * @c: The character to be checked.
  *
- * @c: is an integer param
- *
- * Return: Always 0.
+ * Return: 1 if character is uppercase, 0 otherwise.
  */
-
-
 int _isupper(int c)
 {
+	if (c >= 'A' && c <= 'Z')
+		return (1);
 
-	return (c >= 65 && c <= 90);
+	else
+		return (0);
 }

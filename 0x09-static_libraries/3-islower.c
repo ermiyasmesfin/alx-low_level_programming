@@ -1,18 +1,17 @@
 #include "main.h"
-
 /**
- * _islower - check the code for main School students.
- *
- * @c:  is a parameter
- *
- * Return: Always 0.
+ * _islower - returns 1 if lowercase alphabet and 0 otherwise
+ * @c: takes in a character
+ * Return: 0 for uppercase, 1 for lowercase
  */
-
 int _islower(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
 }

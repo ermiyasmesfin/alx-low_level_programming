@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * _isdigit - check the code for main School students.
+ * _isdigit - Checks for a digit (0-9).
+ * @c: The number to be checked.
  *
- * @c: is an integer param
- *
- * Return: Always 0.
+ * Return: 1 if the number is a digit, 0 otherwise.
  */
-
-
 int _isdigit(int c)
 {
+	if (c >= '0' && c <= '9')
+		return (1);
 
-	return (c >= 48 && c <= 57);
+	else
+		return (0);
 }
