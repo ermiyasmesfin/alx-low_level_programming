@@ -1,28 +1,34 @@
-#include "function_pointers.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- *main -  prints the opcodes of its own main function.
- *@argc: integer value.
- *@argv: character value.
+ * main - print opcodes of this function
+ * @argc: the size of the argument vector
+ * @argv: the argument vector
  *
- *Return: 0(success)
+ * Return: Always 0
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int b;
+	char *mem = (char *) main;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	if (atoi(argv[1]) < 0)
+
+	b = atoi(argv[1]);
+
+	if (b < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	for (i = 0; i < atoi(argv[1]) - 1; i++)
-		printf("%02hhx ", ((char *)main)[i]);
-	printf("%02hhx\n", ((char *)main)[i]);
+
+	while (b--)
+		printf("%02x%c", *mem++ & 0xff, b ? ' ' : '\n');
+
 	return (0);
 }
