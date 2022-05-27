@@ -1,23 +1,23 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * flip_bits - number of bits you would need to flip
- * to get from one number to another
- * @n: parameter
- * @m: destiny
- * Return: nflips
+ * flip_bits - is a function that counts the number of bits to change
+ * @n: is the first number input
+ * @m: is the second number input
+ * Return: number of bits to change
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int i, nflips = 0;
-	unsigned long int j = sizeof(unsigned long int) * 8;
+	int i = 0;
+	unsigned long int num;
 
-	for (i = 0; i < j; i++)
+	num = n ^ m;
+
+	while (num)
 	{
-		if ((m & 1) != (n & 1))
-			nflips += 1;
-		n = n >> 1;
-		m = m >> 1;
+		i++;
+		num &= (num - 1);
 	}
-	return (nflips);
+
+	return (i);
 }
